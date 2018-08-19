@@ -1,10 +1,12 @@
 {
   "name": "electron-quick-start",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -14,9 +16,19 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "build": {
+    "appId": "com.zm",
+    "mac": {
+      "category": "com.hb.suihi"
+    }
+  },
+  "author": "zhangmin",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "electron": "^2.0.0",
+    "electron-builder": "^20.28.1"
+  },
+  "dependencies": {
+    "update-electron-app": "^1.3.0"
   }
 }
